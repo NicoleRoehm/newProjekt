@@ -30,7 +30,7 @@ struct HomeView: View {
                 .navigationTitle("Recipes")
                 
                 .sheet(isPresented: $isDrawerOpen, content: {
-                    AddRezeptView()
+                    AddRezeptView(rezeptName: "BrokkoliAuflauf", beschreibung: "Beschreibung", zutaten: "Brokkoli", portionen: 2)
                 })
                 .navigationDestination(for: Rezept.self){
                     rezept in  RezeptDetailView(rezeptName: "BrokkoliAuflauf", beschreibung: "Beschreibung", zutaten: "Brokkoli", portionen: 2)
