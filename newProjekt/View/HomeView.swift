@@ -11,16 +11,33 @@ struct HomeView: View {
     @StateObject var viewModel = RezeptViewModel()
     @State var isDrawerOpen = false
     var body: some View {
-        NavigationStack{
-            List{
-                ForEach(viewModel.rezeptList){ rezept in
+        VStack{
+            NavigationStack{
+                List{
+                    ForEach(viewModel.savedRezepte){ rezept in
+                        
+                        NavigationLink(value: rezept.rezeptName){
+                            
+                        }
+                    }.onDelete(perform: viewModel.deletRezept(indexSet:))
                     
-                    
+                }.toolbar{
+                    Button{} label: {
+                        Text("Add Recipes")
+                        Image(systemName: "plus")
+                    }
                 }
                 
+                
+                
+                .navigationDestination(for: Rezept.self){
+                    rezept in  RezeptDetailView()
+                }
             }
-        }
-    }
+        }.navigationTitle("Recipes")
+            .sheet(isPresented: $isDrawerOpen, content: {
+                AddRezeptView()
+            })    }
 }
 
 struct HomeView_Previews: PreviewProvider {

@@ -12,7 +12,7 @@ class RezeptViewModel : ObservableObject{
     
     let container = NSPersistentContainer(name: "Rezepte")
     
-    @Published var rezeptList : [Rezept] = []
+    @Published var savedRezepte : [Rezept] = []
     
     init() {
         
@@ -28,7 +28,7 @@ class RezeptViewModel : ObservableObject{
         let request = NSFetchRequest<Rezept>(entityName: String(describing: Rezept.self))
         
         do{
-            rezeptList = try container.viewContext.fetch(request)
+            savedRezepte = try container.viewContext.fetch(request)
         }catch {
             print("loading the data failed: \(error.localizedDescription)")
         }
