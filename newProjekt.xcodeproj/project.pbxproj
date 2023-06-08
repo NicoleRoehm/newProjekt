@@ -14,6 +14,10 @@
 		093D1D802A31D96B00AF4ACC /* newProjektTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D1D7F2A31D96B00AF4ACC /* newProjektTests.swift */; };
 		093D1D8A2A31D96B00AF4ACC /* newProjektUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D1D892A31D96B00AF4ACC /* newProjektUITests.swift */; };
 		093D1D8C2A31D96B00AF4ACC /* newProjektUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D1D8B2A31D96B00AF4ACC /* newProjektUITestsLaunchTests.swift */; };
+		093D1D992A31DA0100AF4ACC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D1D982A31DA0100AF4ACC /* HomeView.swift */; };
+		093D1D9B2A31DA1800AF4ACC /* RezeptDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D1D9A2A31DA1800AF4ACC /* RezeptDetailView.swift */; };
+		093D1D9D2A31DA2C00AF4ACC /* AddRezeptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D1D9C2A31DA2C00AF4ACC /* AddRezeptView.swift */; };
+		093D1D9F2A31DA4A00AF4ACC /* RezeptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D1D9E2A31DA4A00AF4ACC /* RezeptViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		093D1D852A31D96B00AF4ACC /* newProjektUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newProjektUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		093D1D892A31D96B00AF4ACC /* newProjektUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newProjektUITests.swift; sourceTree = "<group>"; };
 		093D1D8B2A31D96B00AF4ACC /* newProjektUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newProjektUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		093D1D982A31DA0100AF4ACC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		093D1D9A2A31DA1800AF4ACC /* RezeptDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezeptDetailView.swift; sourceTree = "<group>"; };
+		093D1D9C2A31DA2C00AF4ACC /* AddRezeptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRezeptView.swift; sourceTree = "<group>"; };
+		093D1D9E2A31DA4A00AF4ACC /* RezeptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezeptViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		093D1D6D2A31D96A00AF4ACC /* newProjekt */ = {
 			isa = PBXGroup;
 			children = (
+				093D1DA22A31DA7300AF4ACC /* Model */,
+				093D1DA12A31DA6B00AF4ACC /* ViewModel */,
+				093D1DA02A31DA6400AF4ACC /* View */,
 				093D1D6E2A31D96A00AF4ACC /* newProjektApp.swift */,
 				093D1D702A31D96A00AF4ACC /* ContentView.swift */,
 				093D1D722A31D96B00AF4ACC /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				093D1D8B2A31D96B00AF4ACC /* newProjektUITestsLaunchTests.swift */,
 			);
 			path = newProjektUITests;
+			sourceTree = "<group>";
+		};
+		093D1DA02A31DA6400AF4ACC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				093D1D982A31DA0100AF4ACC /* HomeView.swift */,
+				093D1D9C2A31DA2C00AF4ACC /* AddRezeptView.swift */,
+				093D1D9A2A31DA1800AF4ACC /* RezeptDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		093D1DA12A31DA6B00AF4ACC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				093D1D9E2A31DA4A00AF4ACC /* RezeptViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		093D1DA22A31DA7300AF4ACC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093D1D992A31DA0100AF4ACC /* HomeView.swift in Sources */,
+				093D1D9B2A31DA1800AF4ACC /* RezeptDetailView.swift in Sources */,
+				093D1D9F2A31DA4A00AF4ACC /* RezeptViewModel.swift in Sources */,
 				093D1D712A31D96A00AF4ACC /* ContentView.swift in Sources */,
+				093D1D9D2A31DA2C00AF4ACC /* AddRezeptView.swift in Sources */,
 				093D1D6F2A31D96A00AF4ACC /* newProjektApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
