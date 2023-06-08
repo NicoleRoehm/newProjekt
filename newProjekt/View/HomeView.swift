@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var viewModel = RezeptViewModel()
+    @State var isDrawerOpen = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            List{
+                ForEach(viewModel.rezeptList){ rezept in
+                    
+                    
+                }
+                
+            }
+        }
     }
 }
 
