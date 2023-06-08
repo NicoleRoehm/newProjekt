@@ -27,17 +27,19 @@ struct HomeView: View {
                         Image(systemName: "plus")
                     }
                 }
+                .navigationTitle("Recipes")
                 
-                
-                
+                .sheet(isPresented: $isDrawerOpen, content: {
+                    AddRezeptView()
+                })
                 .navigationDestination(for: Rezept.self){
-                    rezept in  RezeptDetailView()
+                    rezept in  RezeptDetailView(rezeptName: "BrokkoliAuflauf", beschreibung: "Beschreibung", zutaten: "Brokkoli", portionen: 2)
                 }
             }
-        }.navigationTitle("Recipes")
-            .sheet(isPresented: $isDrawerOpen, content: {
-                AddRezeptView()
-            })    }
+        }
+            
+            
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
